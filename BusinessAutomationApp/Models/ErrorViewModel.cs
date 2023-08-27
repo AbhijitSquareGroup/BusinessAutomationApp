@@ -1,4 +1,5 @@
 namespace BusinessAutomationApp.Models
+
 {
     public class ErrorViewModel
     {

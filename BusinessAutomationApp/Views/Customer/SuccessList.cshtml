@@ -1,20 +1,8 @@
-﻿@using BusinessAutomationApp.Models.Customer;
-@model CustomerList
+﻿@model IEnumerable<CustomerCreate>
 @{
     int slNo = 0;
     // var CustomerList = (List<CustomerCreate>)ViewBag.CustomerList;
 }
-<div class="card">
-    <div class="card-header">
-        @Model.Company.Name
-    </div>
-    <div class="card-body">
-        <h5 class="card-title">@Model.Company.Name</h5>
-        <p class="card-text">Id: @Model.Company.CompanyId</p>
-        <p class="card-text">Id: @Model.Company.Location</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-</div>
 <table class="table">
     <thead class="thead-dark">
         <tr>
@@ -25,7 +13,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach(var customer in Model.Customers)
+        @foreach(var customer in Model)
         {
             <tr>
                 <td>@(++slNo)</td>

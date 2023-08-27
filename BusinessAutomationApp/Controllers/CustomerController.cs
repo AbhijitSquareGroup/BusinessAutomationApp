@@ -1,4 +1,5 @@
 ﻿using BusinessAutomationApp.Models;
+using BusinessAutomationApp.Models.Customer;
 using Microsoft.AspNetCore.Mvc;
 
 
@@ -31,7 +32,10 @@ namespace BusinessAutomationApp.Controllers
 
             if (ModelState.IsValid)
             {
+                //data save operation
                 CustomerTable.Add(customer);
+                ViewBag.SuccessMessage = "Save Successfully";
+                return View("Success");  
             } 
             
            
@@ -50,8 +54,21 @@ namespace BusinessAutomationApp.Controllers
                 Email = "a@gmail.com"
             }
         };
-            
-            return View(customerList);
+            var Company = new Company()
+            {
+                CompanyId = "C001",
+                Name = "ABC",
+                Location = "Mohakhali"
+            };
+            var customerListVM = new CustomerList()
+            {
+                Company = Company,
+                Customers = customerList,
+            };
+
+            //ViewBag.CustomerList = customerList;
+           // return View("SuccessList", customerList);   
+            return View(customerListVM);
         }
         
         /* public string Create(CustomerCreate customer)
