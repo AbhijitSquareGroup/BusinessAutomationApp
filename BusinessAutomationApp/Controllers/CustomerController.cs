@@ -1,6 +1,7 @@
 ﻿using BusinessAutomationApp.Models;
 using Microsoft.AspNetCore.Mvc;
 
+
 namespace BusinessAutomationApp.Controllers
 {
     public class CustomerController : Controller
@@ -13,42 +14,58 @@ namespace BusinessAutomationApp.Controllers
          {
             return View();
         }
+        [HttpGet]
+        public IActionResult Create()
+        {
+
+            return View();
+        }
         //First timeget request kori
         [HttpPost]
         public IActionResult Create(CustomerCreate customer) 
         {
-            if(ModelState.IsValid) 
+            if (customer.Phone.Length != 11)
             {
-                if(customer.Phone.Length == 11) 
-                {
-                    CustomerTable.Add(customer);
-                }
-                else
-                {
-                    ModelState.AddModelError("Phone","Phone must be 11 digit");
-                }
+                ModelState.AddModelError("Phone", "Phone must be 11 digit");
             }
+
+            if (ModelState.IsValid)
+            {
+                CustomerTable.Add(customer);
+            } 
+            
            
             //if(customer.Name!=null && customer.Email!=null)
             return View();
         }
         [HttpGet]
-        public IActionResult Create()
-        { 
-            return View(); 
-        }
-       /* public string Create(CustomerCreate customer)
+        public IActionResult List()
         {
-            return $"this is the create page: {customer.Name} phone :{customer.Phone}";
-        }*/
-        public string CreateList(CustomerCreate[] customer) 
+            var customerList = new List<CustomerCreate>() 
+            {
+                new CustomerCreate()
+            {
+                Name = "Abhijit",
+                Phone = "01862285708",
+                Email = "a@gmail.com"
+            }
+        };
+            
+            return View(customerList);
+        }
+        
+        /* public string Create(CustomerCreate customer)
+         {
+             return $"this is the create page: {customer.Name} phone :{customer.Phone}";
+         }*/
+        public string CreateList(CustomerCreate[] customer)
         {
             string message = "";
-            foreach(var c in customer) 
+            foreach (var c in customer)
             {
                 message += $"this is the create page: {c.Name} phone :{c.Phone}\n";
             }
-            return message ;    
+            return message;
         }
         public static List<CustomerCreate> CustomerTable;
     }

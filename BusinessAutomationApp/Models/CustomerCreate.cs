@@ -4,10 +4,10 @@ namespace BusinessAutomationApp.Models
 {
     public class CustomerCreate
     {
-        public CustomerCreate()
-        {
-            
-        }
+        //public CustomerCreate()
+        //{
+        //    new CustomerCreate();
+        //}
         [Required]
         public string Name { get; set; }
         [Required]

@@ -1,0 +1,25 @@
+﻿@model IEnumerable<CustomerCreate>
+@{
+    int slNo = 0;
+}
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var customer in Model)
+        {
+            <tr>
+                <td>@(++slNo)</td>
+                <td>@customer.Name</td>
+                <td>@customer.Phone</td>
+                <td>@customer.Email</td>
+            </tr>
+        }
+    </tbody>
+</table>
