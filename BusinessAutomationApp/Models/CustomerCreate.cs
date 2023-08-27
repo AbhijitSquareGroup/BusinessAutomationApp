@@ -1,4 +1,6 @@
-﻿namespace BusinessAutomationApp.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace BusinessAutomationApp.Models
 {
     public class CustomerCreate
     {
@@ -6,8 +8,11 @@
         {
             
         }
+        [Required]
         public string Name { get; set; }
+        [Required]
         public string Phone { get; set; }
-        public string Email { get; set; }
+        //? dile nullable  not required
+        public string? Email { get; set; }
     }
 }
