@@ -1,4 +1,6 @@
-﻿@using BusinessAutomationApp.Models.Customer;
+﻿@{
+    Layout = "_AdminLayout";
+}
 @model CustomerList
 @{
     int slNo = 0;
@@ -11,7 +13,7 @@
     <div class="card-body">
         <h5 class="card-title">@Model.Company.Name</h5>
         <p class="card-text">Id: @Model.Company.CompanyId</p>
-        <p class="card-text">Id: @Model.Company.Location</p>
+        <p class="card-text">location: @Model.Company.Location</p>
         <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
 </div>
