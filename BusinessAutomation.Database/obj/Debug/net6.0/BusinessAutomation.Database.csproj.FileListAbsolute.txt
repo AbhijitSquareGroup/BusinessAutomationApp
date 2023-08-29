@@ -1,0 +1,17 @@
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Database\bin\Debug\net6.0\BusinessAutomation.Database.deps.json
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Database\bin\Debug\net6.0\BusinessAutomation.Database.runtimeconfig.json
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Database\bin\Debug\net6.0\BusinessAutomation.Database.dll
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Database\bin\Debug\net6.0\BusinessAutomation.Database.pdb
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Database\bin\Debug\net6.0\BusinessAutomation.Models.dll
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Database\bin\Debug\net6.0\BusinessAutomation.Models.pdb
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Database\obj\Debug\net6.0\BusinessAutomation.Database.csproj.AssemblyReference.cache
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Database\obj\Debug\net6.0\BusinessAutomation.Database.GeneratedMSBuildEditorConfig.editorconfig
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Database\obj\Debug\net6.0\BusinessAutomation.Database.AssemblyInfoInputs.cache
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Database\obj\Debug\net6.0\BusinessAutomation.Database.AssemblyInfo.cs
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Database\obj\Debug\net6.0\BusinessAutomation.Database.csproj.CoreCompileInputs.cache
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Database\obj\Debug\net6.0\BusinessAutomation.Database.csproj.CopyComplete
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Database\obj\Debug\net6.0\BusinessAutomation.Database.dll
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Database\obj\Debug\net6.0\refint\BusinessAutomation.Database.dll
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Database\obj\Debug\net6.0\BusinessAutomation.Database.pdb
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Database\obj\Debug\net6.0\BusinessAutomation.Database.genruntimeconfig.cache
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Database\obj\Debug\net6.0\ref\BusinessAutomation.Database.dll

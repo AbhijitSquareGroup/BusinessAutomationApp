@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace BusinessAutomationApp.Models
+namespace BusinessAutomation.Models
 {
     public class CustomerCreate
     {

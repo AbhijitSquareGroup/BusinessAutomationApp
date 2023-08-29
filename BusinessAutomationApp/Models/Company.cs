@@ -1,4 +1,4 @@
-﻿namespace BusinessAutomationApp.Models
+﻿namespace BusinessAutomation.Models
 {
     public class Company
     {

@@ -66,3 +66,7 @@ F:\ASP.net Project\BusinessAutomationApp\BusinessAutomationApp\bin\Debug\net6.0\
 F:\ASP.net Project\BusinessAutomationApp\BusinessAutomationApp\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 F:\ASP.net Project\BusinessAutomationApp\BusinessAutomationApp\obj\Debug\net6.0\BusinessAutomationApp.csproj.AssemblyReference.cache
 F:\ASP.net Project\BusinessAutomationApp\BusinessAutomationApp\obj\Debug\net6.0\BusinessAutomationApp.csproj.CopyComplete
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomationApp\bin\Debug\net6.0\BusinessAutomation.Database.dll
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomationApp\bin\Debug\net6.0\BusinessAutomation.Models.dll
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomationApp\bin\Debug\net6.0\BusinessAutomation.Database.pdb
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomationApp\bin\Debug\net6.0\BusinessAutomation.Models.pdb

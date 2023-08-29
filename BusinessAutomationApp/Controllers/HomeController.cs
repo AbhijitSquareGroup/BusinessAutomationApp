@@ -1,8 +1,8 @@
-﻿using BusinessAutomationApp.Models;
+﻿using BusinessAutomation.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace BusinessAutomationApp.Controllers
+namespace BusinessAutomation.Controllers
 {
     public class HomeController : Controller
     {

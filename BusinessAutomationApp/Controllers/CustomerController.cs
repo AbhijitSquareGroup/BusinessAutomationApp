@@ -1,11 +1,11 @@
-﻿using BusinessAutomationApp.Database;
-using BusinessAutomationApp.EntityModels;
-using BusinessAutomationApp.Models;
-using BusinessAutomationApp.Models.Customer;
+﻿using BusinessAutomation.Database;
+using BusinessAutomation.Models;
+using BusinessAutomation.Models.Customer;
+using BusinessAutomation.Models.EntityModels;
 using Microsoft.AspNetCore.Mvc;
 
 
-namespace BusinessAutomationApp.Controllers
+namespace BusinessAutomation.Controllers
 {
     public class CustomerController : Controller
     {

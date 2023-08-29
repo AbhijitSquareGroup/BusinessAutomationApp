@@ -1,0 +1,11 @@
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Models\bin\Debug\net6.0\BusinessAutomation.Models.deps.json
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Models\bin\Debug\net6.0\BusinessAutomation.Models.dll
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Models\bin\Debug\net6.0\BusinessAutomation.Models.pdb
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Models\obj\Debug\net6.0\BusinessAutomation.Models.GeneratedMSBuildEditorConfig.editorconfig
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Models\obj\Debug\net6.0\BusinessAutomation.Models.AssemblyInfoInputs.cache
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Models\obj\Debug\net6.0\BusinessAutomation.Models.AssemblyInfo.cs
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Models\obj\Debug\net6.0\BusinessAutomation.Models.csproj.CoreCompileInputs.cache
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Models\obj\Debug\net6.0\BusinessAutomation.Models.dll
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Models\obj\Debug\net6.0\refint\BusinessAutomation.Models.dll
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Models\obj\Debug\net6.0\BusinessAutomation.Models.pdb
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Models\obj\Debug\net6.0\ref\BusinessAutomation.Models.dll

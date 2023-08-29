@@ -1,4 +1,4 @@
-using BusinessAutomationApp.Database;
+using BusinessAutomation.Database;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

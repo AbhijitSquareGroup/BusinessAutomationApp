@@ -782,6 +782,30 @@
             "rid": "win"
           }
         }
+      },
+      "BusinessAutomation.Database/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "BusinessAutomation.Models": "1.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.21"
+        },
+        "compile": {
+          "bin/placeholder/BusinessAutomation.Database.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BusinessAutomation.Database.dll": {}
+        }
+      },
+      "BusinessAutomation.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/BusinessAutomation.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BusinessAutomation.Models.dll": {}
+        }
       }
     }
   },
@@ -2003,10 +2027,22 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "BusinessAutomation.Database/1.0.0": {
+      "type": "project",
+      "path": "../BusinessAutomation.Database/BusinessAutomation.Database.csproj",
+      "msbuildProject": "../BusinessAutomation.Database/BusinessAutomation.Database.csproj"
+    },
+    "BusinessAutomation.Models/1.0.0": {
+      "type": "project",
+      "path": "../BusinessAutomation.Models/BusinessAutomation.Models.csproj",
+      "msbuildProject": "../BusinessAutomation.Models/BusinessAutomation.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "BusinessAutomation.Database >= 1.0.0",
+      "BusinessAutomation.Models >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 6.0.21",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.21",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.21"
@@ -2044,7 +2080,14 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "F:\\ASP.net Project\\BusinessAutomationApp\\BusinessAutomation.Database\\BusinessAutomation.Database.csproj": {
+              "projectPath": "F:\\ASP.net Project\\BusinessAutomationApp\\BusinessAutomation.Database\\BusinessAutomation.Database.csproj"
+            },
+            "F:\\ASP.net Project\\BusinessAutomationApp\\BusinessAutomation.Models\\BusinessAutomation.Models.csproj": {
+              "projectPath": "F:\\ASP.net Project\\BusinessAutomationApp\\BusinessAutomation.Models\\BusinessAutomation.Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

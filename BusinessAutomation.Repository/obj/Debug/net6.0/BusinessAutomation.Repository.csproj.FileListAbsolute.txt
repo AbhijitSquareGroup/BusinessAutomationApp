@@ -1,0 +1,17 @@
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Repository\bin\Debug\net6.0\BusinessAutomation.Repository.deps.json
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Repository\bin\Debug\net6.0\BusinessAutomation.Repository.dll
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Repository\bin\Debug\net6.0\BusinessAutomation.Repository.pdb
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Repository\bin\Debug\net6.0\BusinessAutomation.Database.dll
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Repository\bin\Debug\net6.0\BusinessAutomation.Models.dll
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Repository\bin\Debug\net6.0\BusinessAutomation.Database.pdb
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Repository\bin\Debug\net6.0\BusinessAutomation.Models.pdb
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Repository\obj\Debug\net6.0\BusinessAutomation.Repository.csproj.AssemblyReference.cache
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Repository\obj\Debug\net6.0\BusinessAutomation.Repository.GeneratedMSBuildEditorConfig.editorconfig
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Repository\obj\Debug\net6.0\BusinessAutomation.Repository.AssemblyInfoInputs.cache
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Repository\obj\Debug\net6.0\BusinessAutomation.Repository.AssemblyInfo.cs
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Repository\obj\Debug\net6.0\BusinessAutomation.Repository.csproj.CoreCompileInputs.cache
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Repository\obj\Debug\net6.0\BusinessAutomation.Repository.csproj.CopyComplete
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Repository\obj\Debug\net6.0\BusinessAutomation.Repository.dll
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Repository\obj\Debug\net6.0\refint\BusinessAutomation.Repository.dll
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Repository\obj\Debug\net6.0\BusinessAutomation.Repository.pdb
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Repository\obj\Debug\net6.0\ref\BusinessAutomation.Repository.dll

@@ -15,4 +15,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessAutomation.Database\BusinessAutomation.Database.csproj" />
+    <ProjectReference Include="..\BusinessAutomation.Models\BusinessAutomation.Models.csproj" />
+  </ItemGroup>
+
 </Project>
