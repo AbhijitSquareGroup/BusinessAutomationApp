@@ -16,9 +16,9 @@ namespace BusinessAutomation.Repository
         {
             db = new BusinessAutomationDbContext();
         }
-        public bool Add(Product product)
+        public bool Add(List<Product>products)
         {
-            db.Products.Add(product);
+            db.Products.AddRange(products);
             return db.SaveChanges() > 0;
 
         }

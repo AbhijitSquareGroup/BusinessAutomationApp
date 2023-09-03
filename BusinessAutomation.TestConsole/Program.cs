@@ -9,23 +9,23 @@ namespace BusinessAutomation.TestConsole
         static void Main(string[] args)
         {
             //Create Product
-            List<Product> products = new List<Product>()
+           /* List<Product> products = new List<Product>()
             {
                 new Product()
             {
                 Name = "Kelvinator AC",
                 Description = "AC",
-                Brand = "Sony",
+                *//*Brand = "Sony",*//*
                 SalesPrice = 90000.0
             },
              new Product()
             {
                 Name = "Iphone 14 Pro Max",
                 Description = "Phone",
-                Brand = "Apple",
+               *//* Brand = "Apple",*//*
                 SalesPrice = 160000.0
             },
-        };
+        };*/
             //var product1 = new Product()
             //{
             //    Name = "Sony Bravia",
@@ -40,19 +40,69 @@ namespace BusinessAutomation.TestConsole
             //    Brand = "Apple",
             //    SalesPrice = 130000.0
             //};
+            List<Product> products = new List<Product>()
+            {
+                new Product()
+            {
+                Name = "Kelvinator AC",
+                Description = "AC",
+                BrandId = 1,
+                SalesPrice = 90000.0
+            },
+                new Product()
+            {
+                Name = "Iphone 15 pro max",
+                Description = "Phone",
+                BrandId = 2,
+                SalesPrice = 130000.0
+            },new Product()
+            {
+                Name = "Kelvinator Microwave",
+                Description = "Ac",
+                BrandId = 1,
+                SalesPrice = 30000.0
+            }
+        };
+            /*var product1 = new Product()
+            {
+                Name = "Kelvinator AC",
+                Description = "AC",
+                BrandId = 1,
+                SalesPrice = 90000.0
+            };
+            var product2=new Product()
+            {
+                Name = "Iphone 15 pro max",
+                Description = "Phone",
+                BrandId = 2,
+                SalesPrice = 130000.0
+            };
+            var product3=new Product()
+            {
+                Name = "Kelvinator Microwave",
+                Description = "Ac",
+                BrandId = 1,
+                SalesPrice = 30000.0
+            };*/
+            //bool isS
             // BusinessAutomationDbContext db = new BusinessAutomationDbContext();
             //db.Products.Add(product1);
             //db.Products.Add(product2);
             //db.AddRange(products);
             ProductsRepository productsRepository = new ProductsRepository();
+            bool isSuccess=productsRepository.Add(products);
+           
+
+
 
             //UPDATE OPERATION........
+/*
             var existingProduct = productsRepository.GetById(4);
             existingProduct.Name = "Iphone 11 pro [updated]";
             existingProduct.Description = "Phone [Updated]";
             existingProduct.SalesPrice = 110000;
             bool isSuccess = productsRepository.Update(existingProduct);
-
+*/
 
             //DELETE METHOD
 
