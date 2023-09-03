@@ -16,6 +16,7 @@ namespace BusinessAutomation.Repository
         {
             db = new BusinessAutomationDbContext();
         }
+
         public bool Add(List<Product>products)
         {
             db.Products.AddRange(products);
@@ -43,6 +44,17 @@ namespace BusinessAutomation.Repository
                 db.SaveChanges();
                 Console.WriteLine("Product is Deleted");
             }
+        }
+        //SOFT delete......................when fk and pk relation in others tabels
+        public bool Remove(Product product)
+        {
+            product.IsDeleted = true;
+            return Update(product);
+        }
+
+        public Brand FirstOrDefault()
+        {
+            throw new NotImplementedException();
         }
     }
 }

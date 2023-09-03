@@ -61,3 +61,5 @@ F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.TestConsole\obj\Debu
 F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.TestConsole\obj\Debug\net6.0\ref\BusinessAutomation.TestConsole.dll
 F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.TestConsole\bin\Debug\net6.0\BusinessAutomation.Repository.dll
 F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.TestConsole\bin\Debug\net6.0\BusinessAutomation.Repository.pdb
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.TestConsole\bin\Debug\net6.0\Castle.Core.dll
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.TestConsole\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Proxies.dll

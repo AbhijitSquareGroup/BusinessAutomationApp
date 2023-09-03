@@ -13,8 +13,10 @@ namespace BusinessAutomation.Database
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
            
-            string connectionString = "Server=DESKTOP-D63RLDO;Database=BusinessAutomationDB;User Id=sa;Password=Abjt@8632;";
-            optionsBuilder.UseSqlServer(connectionString);
+            string connectionString = "Server=DESKTOP-D63RLDO;Database=BusinessAutomationDB;User Id=sa;Password=Abjt@8632;MultipleActiveResultSets=True";
+            optionsBuilder
+                // .UseLazyLoadingProxies()
+                .UseSqlServer(connectionString);
             /*base.OnConfiguring(optionsBuilder);*/
         }
 
