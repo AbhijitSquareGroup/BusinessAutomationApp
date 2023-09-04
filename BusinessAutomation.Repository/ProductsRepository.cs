@@ -1,6 +1,7 @@
 ﻿using BusinessAutomation.Database;
 using BusinessAutomation.Models.EntityModels;
 using BusinessAutomation.Models.UtilitiesModels.ProductSearch;
+using BusinessAutomation.Repository.Base;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -10,20 +11,38 @@ using System.Threading.Tasks;
 
 namespace BusinessAutomation.Repository
 {
-    public class ProductsRepository
+    public class ProductsRepository : BaseRepository<Product>
     {
         BusinessAutomationDbContext db;
         public ProductsRepository()
         {
             db = new BusinessAutomationDbContext();
+            _db = db;
         }
 
-        public bool Add(List<Product>products)
-        {
-            db.Products.AddRange(products);
-            return db.SaveChanges() > 0;
+        //public bool Add(List<Product>products)
+        //{
+        //    db.Products.AddRange(products);
+        //    return db.SaveChanges() > 0;
 
-        }
+        //}
+        //public bool Update(Product product)
+        //{
+        //    db.Products.Update(product);
+        //    return db.SaveChanges() > 0;
+        //}
+        //public bool Remove(Product product)
+        //{
+        //    product.IsDeleted = true;
+        //    return Update(product);
+        //}
+        //public ICollection<Product> GetAll()
+        //{
+        //    return db.Products.ToList();
+        //}
+
+
+
 
         public Product GetById(int id)
         {
@@ -31,11 +50,7 @@ namespace BusinessAutomation.Repository
             return existingProduct;
         }
 
-        public bool Update(Product product)
-        {
-            db.Products.Update(product);
-            return db.SaveChanges() > 0;
-        }
+        
         public void Delete(int productId)
         {
             var product = db.Products.Find(productId);
@@ -47,12 +62,10 @@ namespace BusinessAutomation.Repository
             }
         }
         //SOFT delete......................when fk and pk relation in others tabels
-        public bool Remove(Product product)
-        {
-            product.IsDeleted = true;
-            return Update(product);
-        }
+        
 
+        
+        
         public Brand FirstOrDefault()
         {
             throw new NotImplementedException();
@@ -68,7 +81,6 @@ namespace BusinessAutomation.Repository
                 products = db.Products.Where(c => c.Name.ToLower().Contains(searchKey.ToLower())
                 || c.Description.ToLower().Contains(searchKey.ToLower())
                 || (c.Brand == null ? false : c.Brand.Name.ToLower().Contains(searchKey.ToLower()))
-
                 );
             }
             if(searchCriteria.FromPrice!=null)

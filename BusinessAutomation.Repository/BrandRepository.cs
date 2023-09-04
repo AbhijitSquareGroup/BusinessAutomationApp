@@ -1,5 +1,6 @@
 ﻿using BusinessAutomation.Database;
 using BusinessAutomation.Models.EntityModels;
+using BusinessAutomation.Repository.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,20 +9,35 @@ using System.Threading.Tasks;
 
 namespace BusinessAutomation.Repository
 {
-    public class BrandRepository
+    public class BrandRepository :BaseRepository<Brand>
     {
         BusinessAutomationDbContext db;
         public BrandRepository()
         {
             db = new BusinessAutomationDbContext();
-        }
+            _db = db;
+        } 
 
-        public bool Add(List<Brand> Brands)
-        {
-            db.Brands.AddRange(Brands);
-            return db.SaveChanges() > 0;
+        //public bool Add(List<Brand> Brands)
+        //{
+        //    db.Brands.AddRange(Brands);
+        //    return db.SaveChanges() > 0;
 
-        }
+        //}
+        //public bool Update(Brand Brand)
+        //{
+        //    db.Brands.Update(Brand);
+        //    return db.SaveChanges() > 0;
+        //}
+        //public ICollection<Brand> GetAll()
+        //{
+        //    return db.Brands.ToList();
+        //}
+        //public bool Remove(Brand entity)
+        //{
+        //    db.Brands.Remove(entity);
+        //    return db.SaveChanges() > 0;
+        //}
 
         public Brand GetById(int id)
         {
@@ -29,11 +45,7 @@ namespace BusinessAutomation.Repository
             return existingBrand;
         }
 
-        public bool Update(Brand Brand)
-        {
-            db.Brands.Update(Brand);
-            return db.SaveChanges() > 0;
-        }
+       
         public void Delete(int BrandId)
         {
             var Brand = db.Brands.Find(BrandId);
@@ -44,8 +56,7 @@ namespace BusinessAutomation.Repository
                 Console.WriteLine("Brand is Deleted");
             }
         }
-        
-
+       
         public Brand FirstOrDefault()
         {
             throw new NotImplementedException();

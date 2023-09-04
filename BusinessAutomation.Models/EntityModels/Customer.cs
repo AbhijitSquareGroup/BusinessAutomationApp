@@ -11,5 +11,6 @@ namespace BusinessAutomation.Models.EntityModels
         //? dile nullable / not required
         public string? Email { get; set; }
         //public string CustomerType { get; set; }
+        //public string? Address { get; set; }
     }
 }
