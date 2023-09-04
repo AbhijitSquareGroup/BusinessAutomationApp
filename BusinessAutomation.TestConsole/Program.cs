@@ -1,5 +1,6 @@
 ﻿using BusinessAutomation.Database;
 using BusinessAutomation.Models.EntityModels;
+using BusinessAutomation.Models.UtilitiesModels.ProductSearch;
 using BusinessAutomation.Repository;
 using Microsoft.EntityFrameworkCore;
 
@@ -158,19 +159,71 @@ namespace BusinessAutomation.TestConsole
             //CRUD---------------------Session Related data Part-01
 
             BusinessAutomationDbContext db = new BusinessAutomationDbContext();
+            ProductsRepository productsRepository= new ProductsRepository();    
+
+            Console.WriteLine("Provide searchKey...........");
+            string searchKey= Console.ReadLine();
+            double? fromPrice=null;
+            double? toPrice=90000;
+            var searchCriteria = new ProductSearchCriteria()
+            {
+                SearchKey =searchKey ,
+                FromPrice =fromPrice ,
+                ToPrice =toPrice    
+            };
+            var products = productsRepository.SearchProduct(searchCriteria); 
+
+
+            //Deferd Execution,,,,,,,,,,,,,,,,,,,,AsQueryable
+            /*string searchKey = "";
+            var products = db.Products
+                             .Include(c=>c.Brand).AsQueryable();
+            if (string.IsNullOrEmpty(searchKey))
+            {
+                products = db.Products.Where(c=>c.Name.ToLower().Contains(searchKey.ToLower())
+                ||c.Description.ToLower().Contains(searchKey.ToLower())
+                ||(c.Brand==null?false: c.Brand.Name.ToLower().Contains(searchKey.ToLower()))
+                
+                );
+            }
+*/
             //prottekta alada accosiacet object
-            //er jonno include diye alada alada likhte hobe
+            //er jonno include diye alada alada lifkhte hobe
+
+
+
+
+
+
             //EGER LOADING
             //LINQ->Collection e kaj kore
             //LAMDA EXPRESSION APPROACH>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-            var products = db.Products.Where(p=> p.SalesPrice > 50000 && p.SalesPrice < 100000);
-                             //.Include(c => c.Brand)
-                             //.AsQueryable();
+            //Filter Include in eger Loading/..........................
+            //var brands = db.Brands
+            //               .Include(b => b.products.Where(p => p.SalesPrice > 50000 && p.SalesPrice < 100000));
+
+
+            //var products = db.Products
+            //                 .Where(p => p.SalesPrice > 50000 && p.SalesPrice < 100000);
+            //.Select(p=> new { p.Name, p.Description, p.SalesPrice });
+            //.Include(c => c.Brand)
+            //.AsQueryable();
+
+
+
+
+
             //CLASIC APPROACH>>>>>>>>>>>>>>>>>>>
-           /* var existingProducts =from p in db.Products
-                                  where p.SalesPrice >50000 && p.SalesPrice <100000
-                                  orderby p.Id
-                                  select p;*/
+            //var existingProducts = from p in db.Products
+            //                       where p.SalesPrice > 50000 && p.SalesPrice < 100000
+            //                       select new { p.Name,p.Description,p.SalesPrice };
+            //                       //orderby p.Id
+            //                       //select p;
+
+
+
+
+
             foreach (var product in products)
             {
                 Console.WriteLine(product.GetInfo());

@@ -1,5 +1,6 @@
 ﻿using BusinessAutomation.Database;
 using BusinessAutomation.Models.EntityModels;
+using BusinessAutomation.Models.UtilitiesModels.ProductSearch;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -55,6 +56,31 @@ namespace BusinessAutomation.Repository
         public Brand FirstOrDefault()
         {
             throw new NotImplementedException();
+        }
+        public ICollection<Product> SearchProduct(ProductSearchCriteria searchCriteria)
+        {
+            var searchKey = searchCriteria.SearchKey;
+            //string searchKey = "";
+            var products = db.Products
+                             .Include(c => c.Brand).AsQueryable();
+            if (string.IsNullOrEmpty(searchKey))
+            {
+                products = db.Products.Where(c => c.Name.ToLower().Contains(searchKey.ToLower())
+                || c.Description.ToLower().Contains(searchKey.ToLower())
+                || (c.Brand == null ? false : c.Brand.Name.ToLower().Contains(searchKey.ToLower()))
+
+                );
+            }
+            if(searchCriteria.FromPrice!=null)
+            {
+                products = products.Where(c=>c.SalesPrice > searchCriteria.FromPrice);
+            }
+            if (searchCriteria.ToPrice != null)
+            {
+                products = products.Where(c => c.SalesPrice <= searchCriteria.ToPrice);
+            }
+            return products.ToList();
+
         }
     }
 }
