@@ -50,7 +50,7 @@ namespace BusinessAutomation.Repository
             return existingProduct;
         }
 
-        
+
         public void Delete(int productId)
         {
             var product = db.Products.Find(productId);
@@ -62,10 +62,10 @@ namespace BusinessAutomation.Repository
             }
         }
         //SOFT delete......................when fk and pk relation in others tabels
-        
 
-        
-        
+
+
+
         public Brand FirstOrDefault()
         {
             throw new NotImplementedException();
@@ -76,16 +76,18 @@ namespace BusinessAutomation.Repository
             //string searchKey = "";
             var products = db.Products
                              .Include(c => c.Brand).AsQueryable();
-            if (string.IsNullOrEmpty(searchKey))
+
+            if (!string.IsNullOrEmpty(searchKey))
             {
-                products = db.Products.Where(c => c.Name.ToLower().Contains(searchKey.ToLower())
-                || c.Description.ToLower().Contains(searchKey.ToLower())
-                || (c.Brand == null ? false : c.Brand.Name.ToLower().Contains(searchKey.ToLower()))
-                );
+                products = db.Products
+                    .Where(c => c.Name.ToLower().Contains(searchKey.ToLower())
+                        || c.Description.ToLower().Contains(searchKey.ToLower())
+                    || (c.Brand == null ? false : c.Brand.Name.ToLower().Contains(searchKey.ToLower()))
+                    );
             }
-            if(searchCriteria.FromPrice!=null)
+            if (searchCriteria.FromPrice != null)
             {
-                products = products.Where(c=>c.SalesPrice > searchCriteria.FromPrice);
+                products = products.Where(c => c.SalesPrice > searchCriteria.FromPrice);
             }
             if (searchCriteria.ToPrice != null)
             {

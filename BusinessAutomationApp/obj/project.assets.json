@@ -2249,6 +2249,20 @@
         "runtime": {
           "bin/placeholder/BusinessAutomation.Models.dll": {}
         }
+      },
+      "BusinessAutomation.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "BusinessAutomation.Database": "1.0.0",
+          "BusinessAutomation.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BusinessAutomation.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BusinessAutomation.Repository.dll": {}
+        }
       }
     }
   },
@@ -7104,12 +7118,18 @@
       "type": "project",
       "path": "../BusinessAutomation.Models/BusinessAutomation.Models.csproj",
       "msbuildProject": "../BusinessAutomation.Models/BusinessAutomation.Models.csproj"
+    },
+    "BusinessAutomation.Repository/1.0.0": {
+      "type": "project",
+      "path": "../BusinessAutomation.Repository/BusinessAutomation.Repository.csproj",
+      "msbuildProject": "../BusinessAutomation.Repository/BusinessAutomation.Repository.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "BusinessAutomation.Database >= 1.0.0",
       "BusinessAutomation.Models >= 1.0.0",
+      "BusinessAutomation.Repository >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 6.0.21",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.21",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.21"
@@ -7153,6 +7173,9 @@
             },
             "F:\\ASP.net Project\\BusinessAutomationApp\\BusinessAutomation.Models\\BusinessAutomation.Models.csproj": {
               "projectPath": "F:\\ASP.net Project\\BusinessAutomationApp\\BusinessAutomation.Models\\BusinessAutomation.Models.csproj"
+            },
+            "F:\\ASP.net Project\\BusinessAutomationApp\\BusinessAutomation.Repository\\BusinessAutomation.Repository.csproj": {
+              "projectPath": "F:\\ASP.net Project\\BusinessAutomationApp\\BusinessAutomation.Repository\\BusinessAutomation.Repository.csproj"
             }
           }
         }

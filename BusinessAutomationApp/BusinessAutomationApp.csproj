@@ -18,6 +18,7 @@
   <ItemGroup>
     <ProjectReference Include="..\BusinessAutomation.Database\BusinessAutomation.Database.csproj" />
     <ProjectReference Include="..\BusinessAutomation.Models\BusinessAutomation.Models.csproj" />
+    <ProjectReference Include="..\BusinessAutomation.Repository\BusinessAutomation.Repository.csproj" />
   </ItemGroup>
 
 </Project>
