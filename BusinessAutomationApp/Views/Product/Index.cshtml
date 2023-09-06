@@ -43,7 +43,7 @@
                         @productItem.SalesPrice
                     </td>
                     <td>
-                        View | Edit | Remove
+                        View | <a asp-action="Edit" asp-route-id="@productItem.Id">Edit</a>  | Remove
                     </td>
                 </tr>
             }

@@ -39,6 +39,7 @@ namespace BusinessAutomationApp.Controllers
             // Use LINQ to project products into ProductListItem
             var productList = products.Select(product => new ProductListItem
             {
+                Id= product.Id,
                 Name = product.Name,
                 Description = product.Description,
                 SalesPrice = product.SalesPrice
@@ -50,7 +51,7 @@ namespace BusinessAutomationApp.Controllers
 
             return View(model);
         }
-        public IActionResult cREATE()
+        public IActionResult Create()
         {
             ProductCreateVM model = new ProductCreateVM()
             {
@@ -83,6 +84,47 @@ namespace BusinessAutomationApp.Controllers
             return View(model);
 
         }
+        //product/edit?id=8
+        public IActionResult Edit(int? id)
+        {
+            if(id== null)
+            {
+                ViewBag.ErrorMessage = "Id is not set for the Products!";
+                return View("_ApplicationError");
+            }
+            var existingProduct = _productRepository.GetById((int)id);
+            if(existingProduct == null) 
+            {
+                ViewBag.ErrorMessage = $"Did not Find Any Product with id : {id}";
+                return View("_ApplicationError");
+            }
+            var productEditVM =new ProductEditVM()
+            {
+                Id=existingProduct.Id,
+                Name=existingProduct.Name,
+                Description=existingProduct.Description,
+                SalesPrice=existingProduct.SalesPrice,
+            }; 
+            return View(productEditVM);
+        }
+        [HttpPost]
+        public IActionResult Edit(ProductEditVM model)
+        {
+            if (ModelState.IsValid)
+            {
+                var productToUpdate = _productRepository.GetById(model.Id);
+                productToUpdate.Description = model.Description;
+                productToUpdate.Name = model.Name;
+                productToUpdate.SalesPrice = model.SalesPrice;
+                bool isSuccess = _productRepository.Update(productToUpdate);
+                if (isSuccess)
+                {
+                    return RedirectToAction("Index");
+                }
+            }
 
+            return View(model);
+
+        }
     }
 }
