@@ -1,6 +1,7 @@
 ﻿using BusinessAutomation.Database;
 using BusinessAutomation.Models.EntityModels;
 using BusinessAutomation.Models.UtilitiesModels.ProductSearch;
+using BusinessAutomation.Repositories.Abstractions.Products;
 using BusinessAutomation.Repository.Base;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -12,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace BusinessAutomation.Repository
 {
-    public class ProductsRepository : BaseRepository<Product>
+    public class ProductsRepository : BaseRepository<Product>,IProductRepository
     {
         BusinessAutomationDbContext db;
         public Guid Guid { get; set; }

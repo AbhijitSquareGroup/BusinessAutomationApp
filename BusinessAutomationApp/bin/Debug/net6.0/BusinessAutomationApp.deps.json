@@ -1233,10 +1233,19 @@
           "BusinessAutomation.Models.dll": {}
         }
       },
+      "BusinessAutomation.Repositories.Abstractions/1.0.0": {
+        "dependencies": {
+          "BusinessAutomation.Models": "1.0.0"
+        },
+        "runtime": {
+          "BusinessAutomation.Repositories.Abstractions.dll": {}
+        }
+      },
       "BusinessAutomation.Repository/1.0.0": {
         "dependencies": {
           "BusinessAutomation.Database": "1.0.0",
-          "BusinessAutomation.Models": "1.0.0"
+          "BusinessAutomation.Models": "1.0.0",
+          "BusinessAutomation.Repositories.Abstractions": "1.0.0"
         },
         "runtime": {
           "BusinessAutomation.Repository.dll": {}
@@ -2117,6 +2126,11 @@
       "sha512": ""
     },
     "BusinessAutomation.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BusinessAutomation.Repositories.Abstractions/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

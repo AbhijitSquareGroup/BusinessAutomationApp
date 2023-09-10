@@ -1,5 +1,6 @@
 ﻿using BusinessAutomation.Models.EntityModels;
 using BusinessAutomation.Models.UtilitiesModels.ProductSearch;
+using BusinessAutomation.Repositories.Abstractions.Products;
 using BusinessAutomation.Repository;
 using BusinessAutomationApp.DI_Test_Models;
 using BusinessAutomationApp.Models.Product;
@@ -10,21 +11,21 @@ namespace BusinessAutomationApp.Controllers
 {
     public class ProductController : Controller
     {
-        ProductsRepository _productRepository;
+        IProductRepository _productRepository;
         BrandRepository _brandRepository;
         //Dependency Injecection ADScopped ,AddTransient.....
-        RandomClass _randomClass;
+        //RandomClass _randomClass;
         //public ProductController()
         //{
         //    _productRepository = new ProductsRepository();
         //    _brandRepository = new BrandRepository();
         //}
 
-        public ProductController(ProductsRepository productsRepository, BrandRepository brandsRepository, RandomClass randomClass)
+        public ProductController(IProductRepository productsRepository, BrandRepository brandsRepository)
         {
             _productRepository = productsRepository;
             _brandRepository = brandsRepository;
-            _randomClass = randomClass;
+            //_randomClass = randomClass;
         }
         public IActionResult Index(ProductIndex model)
         {

@@ -74,3 +74,5 @@ F:\ASP.net Project\BusinessAutomationApp\BusinessAutomationApp\bin\Debug\net6.0\
 F:\ASP.net Project\BusinessAutomationApp\BusinessAutomationApp\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Proxies.dll
 F:\ASP.net Project\BusinessAutomationApp\BusinessAutomationApp\bin\Debug\net6.0\BusinessAutomation.Repository.dll
 F:\ASP.net Project\BusinessAutomationApp\BusinessAutomationApp\bin\Debug\net6.0\BusinessAutomation.Repository.pdb
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomationApp\bin\Debug\net6.0\BusinessAutomation.Repositories.Abstractions.dll
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomationApp\bin\Debug\net6.0\BusinessAutomation.Repositories.Abstractions.pdb

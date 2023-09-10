@@ -1,4 +1,5 @@
 using BusinessAutomation.Database;
+using BusinessAutomation.Repositories.Abstractions.Products;
 using BusinessAutomation.Repository;
 using BusinessAutomationApp.DI_Test_Models;
 using Microsoft.EntityFrameworkCore;
@@ -9,8 +10,35 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 //dependency resolve kore ekhane...
 builder.Services.AddDbContext<BusinessAutomationDbContext>(opt =>opt.UseSqlServer("Server=DESKTOP-D63RLDO;Database=BusinessAutomationDB;User Id=sa;Password=Abjt@8632;MultipleActiveResultSets=True"));
-builder.Services.AddScoped<ProductsRepository>();
-builder.Services.AddScoped<RandomClass>();
+//productRepository r object baniye dibe
+builder.Services.AddScoped<IProductRepository,ProductsRepository>();
+
+
+
+
+//Factory method implementation...........
+/*builder.Services.AddScoped<IProductRepository>(serviceProvider =>
+{
+    int customerType = 1;
+    if(customerType == 1)
+    {
+        var db = serviceProvider.GetService<BusinessAutomationDbContext>(); 
+        return new ProductsRepository(db);  
+    }
+    else
+    {
+        return new ProductCloudRepository();
+    }
+});*/
+
+
+
+
+
+
+
+
+//builder.Services.AddScoped<RandomClass, RandomClass>();
 builder.Services.AddScoped<BrandRepository>();
 
 

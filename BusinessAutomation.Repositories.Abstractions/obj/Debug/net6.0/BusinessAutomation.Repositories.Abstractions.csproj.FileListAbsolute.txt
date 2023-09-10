@@ -1,0 +1,15 @@
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Repositories.Abstractions\obj\Debug\net6.0\BusinessAutomation.Repositories.Abstractions.csproj.AssemblyReference.cache
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Repositories.Abstractions\obj\Debug\net6.0\BusinessAutomation.Repositories.Abstractions.GeneratedMSBuildEditorConfig.editorconfig
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Repositories.Abstractions\obj\Debug\net6.0\BusinessAutomation.Repositories.Abstractions.AssemblyInfoInputs.cache
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Repositories.Abstractions\obj\Debug\net6.0\BusinessAutomation.Repositories.Abstractions.AssemblyInfo.cs
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Repositories.Abstractions\obj\Debug\net6.0\BusinessAutomation.Repositories.Abstractions.csproj.CoreCompileInputs.cache
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Repositories.Abstractions\bin\Debug\net6.0\BusinessAutomation.Repositories.Abstractions.deps.json
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Repositories.Abstractions\bin\Debug\net6.0\BusinessAutomation.Repositories.Abstractions.dll
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Repositories.Abstractions\bin\Debug\net6.0\BusinessAutomation.Repositories.Abstractions.pdb
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Repositories.Abstractions\bin\Debug\net6.0\BusinessAutomation.Models.dll
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Repositories.Abstractions\bin\Debug\net6.0\BusinessAutomation.Models.pdb
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Repositories.Abstractions\obj\Debug\net6.0\BusinessAutomation.Repositories.Abstractions.csproj.CopyComplete
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Repositories.Abstractions\obj\Debug\net6.0\BusinessAutomation.Repositories.Abstractions.dll
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Repositories.Abstractions\obj\Debug\net6.0\refint\BusinessAutomation.Repositories.Abstractions.dll
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Repositories.Abstractions\obj\Debug\net6.0\BusinessAutomation.Repositories.Abstractions.pdb
+F:\ASP.net Project\BusinessAutomationApp\BusinessAutomation.Repositories.Abstractions\obj\Debug\net6.0\ref\BusinessAutomation.Repositories.Abstractions.dll

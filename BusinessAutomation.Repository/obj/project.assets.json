@@ -2204,6 +2204,19 @@
         "runtime": {
           "bin/placeholder/BusinessAutomation.Models.dll": {}
         }
+      },
+      "BusinessAutomation.Repositories.Abstractions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "BusinessAutomation.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BusinessAutomation.Repositories.Abstractions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BusinessAutomation.Repositories.Abstractions.dll": {}
+        }
       }
     }
   },
@@ -7003,12 +7016,18 @@
       "type": "project",
       "path": "../BusinessAutomation.Models/BusinessAutomation.Models.csproj",
       "msbuildProject": "../BusinessAutomation.Models/BusinessAutomation.Models.csproj"
+    },
+    "BusinessAutomation.Repositories.Abstractions/1.0.0": {
+      "type": "project",
+      "path": "../BusinessAutomation.Repositories.Abstractions/BusinessAutomation.Repositories.Abstractions.csproj",
+      "msbuildProject": "../BusinessAutomation.Repositories.Abstractions/BusinessAutomation.Repositories.Abstractions.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "BusinessAutomation.Database >= 1.0.0",
-      "BusinessAutomation.Models >= 1.0.0"
+      "BusinessAutomation.Models >= 1.0.0",
+      "BusinessAutomation.Repositories.Abstractions >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -7049,6 +7068,9 @@
             },
             "F:\\ASP.net Project\\BusinessAutomationApp\\BusinessAutomation.Models\\BusinessAutomation.Models.csproj": {
               "projectPath": "F:\\ASP.net Project\\BusinessAutomationApp\\BusinessAutomation.Models\\BusinessAutomation.Models.csproj"
+            },
+            "F:\\ASP.net Project\\BusinessAutomationApp\\BusinessAutomation.Repositories.Abstractions\\BusinessAutomation.Repositories.Abstractions.csproj": {
+              "projectPath": "F:\\ASP.net Project\\BusinessAutomationApp\\BusinessAutomation.Repositories.Abstractions\\BusinessAutomation.Repositories.Abstractions.csproj"
             }
           }
         }

@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "BusinessAutomation.Repositories.Abstractions/1.0.0": {
+        "dependencies": {
+          "BusinessAutomation.Models": "1.0.0"
+        },
+        "runtime": {
+          "BusinessAutomation.Repositories.Abstractions.dll": {}
+        }
+      },
+      "BusinessAutomation.Models/1.0.0": {
+        "runtime": {
+          "BusinessAutomation.Models.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BusinessAutomation.Repositories.Abstractions/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BusinessAutomation.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

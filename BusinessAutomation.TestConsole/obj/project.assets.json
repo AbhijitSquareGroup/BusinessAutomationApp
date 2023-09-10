@@ -2205,12 +2205,26 @@
           "bin/placeholder/BusinessAutomation.Models.dll": {}
         }
       },
+      "BusinessAutomation.Repositories.Abstractions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "BusinessAutomation.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BusinessAutomation.Repositories.Abstractions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BusinessAutomation.Repositories.Abstractions.dll": {}
+        }
+      },
       "BusinessAutomation.Repository/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "BusinessAutomation.Database": "1.0.0",
-          "BusinessAutomation.Models": "1.0.0"
+          "BusinessAutomation.Models": "1.0.0",
+          "BusinessAutomation.Repositories.Abstractions": "1.0.0"
         },
         "compile": {
           "bin/placeholder/BusinessAutomation.Repository.dll": {}
@@ -7017,6 +7031,11 @@
       "type": "project",
       "path": "../BusinessAutomation.Models/BusinessAutomation.Models.csproj",
       "msbuildProject": "../BusinessAutomation.Models/BusinessAutomation.Models.csproj"
+    },
+    "BusinessAutomation.Repositories.Abstractions/1.0.0": {
+      "type": "project",
+      "path": "../BusinessAutomation.Repositories.Abstractions/BusinessAutomation.Repositories.Abstractions.csproj",
+      "msbuildProject": "../BusinessAutomation.Repositories.Abstractions/BusinessAutomation.Repositories.Abstractions.csproj"
     },
     "BusinessAutomation.Repository/1.0.0": {
       "type": "project",
