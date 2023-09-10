@@ -7,18 +7,22 @@ namespace BusinessAutomation.Database
     {
         ////BusinessAutomationDbContext Virtual Database
         ////Table represent korte hole dbset lagbe
+        public BusinessAutomationDbContext(DbContextOptions options):base(options)
+        {
+            
+        }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Product> Products { get; set; }  
         public DbSet<Brand> Brands { get; set; }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
            
-            string connectionString = "Server=DESKTOP-D63RLDO;Database=BusinessAutomationDB;User Id=sa;Password=Abjt@8632;MultipleActiveResultSets=True";
-            optionsBuilder
-                // .UseLazyLoadingProxies()
-                .UseSqlServer(connectionString);
-            /*base.OnConfiguring(optionsBuilder);*/
-        }
+        //    string connectionString = "Server=DESKTOP-D63RLDO;Database=BusinessAutomationDB;User Id=sa;Password=Abjt@8632;MultipleActiveResultSets=True";
+        //    optionsBuilder
+        //        // .UseLazyLoadingProxies()
+        //        .UseSqlServer(connectionString);
+        //    /*base.OnConfiguring(optionsBuilder);*/
+        //}
 
         /*public BusinessAutomationDbContext(DbContextOptions<BusinessAutomationDbContext> options): base(options)
         {

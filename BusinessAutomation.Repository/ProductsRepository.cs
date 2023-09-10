@@ -5,6 +5,7 @@ using BusinessAutomation.Repository.Base;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,9 +15,12 @@ namespace BusinessAutomation.Repository
     public class ProductsRepository : BaseRepository<Product>
     {
         BusinessAutomationDbContext db;
-        public ProductsRepository()
+        public Guid Guid { get; set; }
+        public ProductsRepository(BusinessAutomationDbContext db)
         {
-            db = new BusinessAutomationDbContext();
+            Guid = Guid.NewGuid();
+            Debug.WriteLine("Product Repository is Created with : "+Guid.ToString());
+            this.db = db;
             _db = db;
         }
 

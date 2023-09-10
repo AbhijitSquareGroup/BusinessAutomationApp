@@ -2,6 +2,7 @@
 using BusinessAutomation.Models;
 using BusinessAutomation.Models.Customer;
 using BusinessAutomation.Models.EntityModels;
+using BusinessAutomation.Repository;
 using Microsoft.AspNetCore.Mvc;
 
 
@@ -9,11 +10,10 @@ namespace BusinessAutomation.Controllers
 {
     public class CustomerController : Controller
     {
-        BusinessAutomationDbContext db;
-        public CustomerController()
+        CustomerRepository _customerRepository;
+        public CustomerController(CustomerRepository customerRepository)
         {
-            CustomerTable  = new List<CustomerCreate>();
-            db = new BusinessAutomationDbContext(); 
+            _customerRepository = customerRepository; 
         }
         public IActionResult Index()
          {
@@ -37,16 +37,20 @@ namespace BusinessAutomation.Controllers
             if (ModelState.IsValid)
             {
                 //data save operation
-                var entity = new Customer()
+                List<Customer> customers = new List<Customer>()
+                {
+
+               new Customer()
+
                 {
                     Name = customer.Name,
                     Email= customer.Email,
                     Phone = customer.Phone,
 
+                 }
                 };
-                db.Customers.Add(entity);
-                int successCount=db.SaveChanges();
-                if(successCount > 0)
+                var isSuccess = _customerRepository.Add(customers);
+                if(isSuccess)
                 {
                     ViewBag.SuccessMessage = "Saved SuccessFully";
                     return View("Success");

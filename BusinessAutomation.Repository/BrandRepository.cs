@@ -12,9 +12,9 @@ namespace BusinessAutomation.Repository
     public class BrandRepository :BaseRepository<Brand>
     {
         BusinessAutomationDbContext db;
-        public BrandRepository()
+        public BrandRepository(BusinessAutomationDbContext db)
         {
-            db = new BusinessAutomationDbContext();
+            this.db = db;
             _db = db;
         } 
 
