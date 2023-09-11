@@ -2277,6 +2277,33 @@
         "runtime": {
           "bin/placeholder/BusinessAutomation.Repository.dll": {}
         }
+      },
+      "BusinessAutomation.Services.Abstraction/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "BusinessAutomation.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BusinessAutomation.Services.Abstraction.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BusinessAutomation.Services.Abstraction.dll": {}
+        }
+      },
+      "BusinessAutomation.Services.Products/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "BusinessAutomation.Repositories.Abstractions": "1.0.0",
+          "BusinessAutomation.Services.Abstraction": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BusinessAutomation.Services.Products.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BusinessAutomation.Services.Products.dll": {}
+        }
       }
     }
   },
@@ -7142,6 +7169,16 @@
       "type": "project",
       "path": "../BusinessAutomation.Repository/BusinessAutomation.Repository.csproj",
       "msbuildProject": "../BusinessAutomation.Repository/BusinessAutomation.Repository.csproj"
+    },
+    "BusinessAutomation.Services.Abstraction/1.0.0": {
+      "type": "project",
+      "path": "../BusinessAutomation.Services.Abstraction/BusinessAutomation.Services.Abstraction.csproj",
+      "msbuildProject": "../BusinessAutomation.Services.Abstraction/BusinessAutomation.Services.Abstraction.csproj"
+    },
+    "BusinessAutomation.Services.Products/1.0.0": {
+      "type": "project",
+      "path": "../BusinessAutomation.Services.Products/BusinessAutomation.Services.Products.csproj",
+      "msbuildProject": "../BusinessAutomation.Services.Products/BusinessAutomation.Services.Products.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -7149,6 +7186,8 @@
       "BusinessAutomation.Database >= 1.0.0",
       "BusinessAutomation.Models >= 1.0.0",
       "BusinessAutomation.Repository >= 1.0.0",
+      "BusinessAutomation.Services.Abstraction >= 1.0.0",
+      "BusinessAutomation.Services.Products >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 6.0.21",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.21",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.21"
@@ -7195,6 +7234,12 @@
             },
             "F:\\ASP.net Project\\BusinessAutomationApp\\BusinessAutomation.Repository\\BusinessAutomation.Repository.csproj": {
               "projectPath": "F:\\ASP.net Project\\BusinessAutomationApp\\BusinessAutomation.Repository\\BusinessAutomation.Repository.csproj"
+            },
+            "F:\\ASP.net Project\\BusinessAutomationApp\\BusinessAutomation.Services.Abstraction\\BusinessAutomation.Services.Abstraction.csproj": {
+              "projectPath": "F:\\ASP.net Project\\BusinessAutomationApp\\BusinessAutomation.Services.Abstraction\\BusinessAutomation.Services.Abstraction.csproj"
+            },
+            "F:\\ASP.net Project\\BusinessAutomationApp\\BusinessAutomation.Services.Products\\BusinessAutomation.Services.Products.csproj": {
+              "projectPath": "F:\\ASP.net Project\\BusinessAutomationApp\\BusinessAutomation.Services.Products\\BusinessAutomation.Services.Products.csproj"
             }
           }
         }

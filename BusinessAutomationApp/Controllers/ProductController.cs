@@ -2,6 +2,7 @@
 using BusinessAutomation.Models.UtilitiesModels.ProductSearch;
 using BusinessAutomation.Repositories.Abstractions.Products;
 using BusinessAutomation.Repository;
+using BusinessAutomation.Services.Abstraction.Products;
 using BusinessAutomationApp.DI_Test_Models;
 using BusinessAutomationApp.Models.Product;
 using Microsoft.AspNetCore.Mvc;
@@ -11,7 +12,7 @@ namespace BusinessAutomationApp.Controllers
 {
     public class ProductController : Controller
     {
-        IProductRepository _productRepository;
+        IProductService _productRepository;
         BrandRepository _brandRepository;
         //Dependency Injecection ADScopped ,AddTransient.....
         //RandomClass _randomClass;

@@ -1,6 +1,8 @@
 using BusinessAutomation.Database;
 using BusinessAutomation.Repositories.Abstractions.Products;
 using BusinessAutomation.Repository;
+using BusinessAutomation.Services.Abstraction.Products;
+using BusinessAutomation.Services.Products;
 using BusinessAutomationApp.DI_Test_Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,6 +14,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<BusinessAutomationDbContext>(opt =>opt.UseSqlServer("Server=DESKTOP-D63RLDO;Database=BusinessAutomationDB;User Id=sa;Password=Abjt@8632;MultipleActiveResultSets=True"));
 //productRepository r object baniye dibe
 builder.Services.AddScoped<IProductRepository,ProductsRepository>();
+builder.Services.AddScoped<IProductService, ProductService>();
 
 
 
