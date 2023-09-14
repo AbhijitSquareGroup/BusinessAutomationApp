@@ -13,38 +13,43 @@ namespace BusinessAutomation.Services.Products
     public class ProductService : IProductService
     {
         IProductRepository _productRepository;
-        public ProductService()
+        public ProductService(IProductRepository productRepository)
         {
-            _productRepository
+            _productRepository= productRepository;  
         }
         public bool Add(List<Product> products)
         {
-            throw new NotImplementedException();
+            bool isSuccess= _productRepository.Add(products);
+            return isSuccess;
         }
 
         public ICollection<Product> GetAll()
         {
-            throw new NotImplementedException();
+            //Logic
+            var products = _productRepository.GetAll();
+            return products;
         }
 
         public Product GetById(int id)
         {
-            throw new NotImplementedException();
+            return _productRepository.GetById(id);
         }
 
         public bool Remove(Product product)
         {
-            throw new NotImplementedException();
+            bool isSuccess= _productRepository.Remove(product);
+            return isSuccess;
         }
 
         public ICollection<Product> SearchProduct(ProductSearchCriteria searchCriteria)
         {
-            throw new NotImplementedException();
+            return _productRepository.SearchProduct(searchCriteria);
         }
 
         public bool Update(Product product)
         {
-            throw new NotImplementedException();
+            bool isSuccess = _productRepository.Update(product);
+            return isSuccess;   
         }
     }
 }

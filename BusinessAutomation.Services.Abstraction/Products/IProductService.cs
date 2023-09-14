@@ -1,4 +1,5 @@
 ﻿using BusinessAutomation.Models.EntityModels;
+using BusinessAutomation.Models.UtilitiesModels.ProductSearch;
 using System;
 using System.Collections.Generic;
 using System.Linq;

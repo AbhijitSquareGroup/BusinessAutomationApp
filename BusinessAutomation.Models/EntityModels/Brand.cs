@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessAutomation.Models.EntityModels
 {
-    public class Brand
+    public class Brand                                               
     {
         public int Id { get; set; }
         public string Name { get; set; }

@@ -1,4 +1,5 @@
 ﻿using BusinessAutomation.Models.EntityModels;
+using BusinessAutomation.Services.Abstraction.Base;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BusinessAutomation.Repository.Base
 {
-    public abstract class BaseRepository<T> where T : class
+    public abstract class BaseRepository<T> :IRepository<T> where T : class
          
     {
         protected DbContext _db;
@@ -54,5 +55,7 @@ namespace BusinessAutomation.Repository.Base
             //product.IsDeleted = true;
             //return Update(product);
         }
+         
+        
     }
 }

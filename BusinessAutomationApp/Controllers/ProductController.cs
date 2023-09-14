@@ -12,19 +12,19 @@ namespace BusinessAutomationApp.Controllers
 {
     public class ProductController : Controller
     {
-        IProductService _productRepository;
+        IProductService _productService;
         BrandRepository _brandRepository;
         //Dependency Injecection ADScopped ,AddTransient.....
         //RandomClass _randomClass;
         //public ProductController()
         //{
-        //    _productRepository = new ProductsRepository();
+        //    _productService = new ProductsRepository();
         //    _brandRepository = new BrandRepository();
         //}
 
-        public ProductController(IProductRepository productsRepository, BrandRepository brandsRepository)
+        public ProductController(IProductService productService, BrandRepository brandsRepository)
         {
-            _productRepository = productsRepository;
+            _productService = productService;
             _brandRepository = brandsRepository;
             //_randomClass = randomClass;
         }
@@ -39,11 +39,11 @@ namespace BusinessAutomationApp.Controllers
                     /*FromPrice = model.FromPrice,
                     ToPrice = model.ToPrice*/
                 };
-                products = _productRepository.SearchProduct(ProductSearchCriteria);
+                products = _productService.SearchProduct(ProductSearchCriteria);
             }
             else
             {
-                products = _productRepository.GetAll();
+                products = _productService.GetAll();
             }
 
 
@@ -86,7 +86,7 @@ namespace BusinessAutomationApp.Controllers
                     BrandId =model.BrandId
                 },
                 };
-                bool isSuccess = _productRepository.Add(products);
+                bool isSuccess = _productService.Add(products);
                 if (isSuccess)
                 {
                     return RedirectToAction("Index");
@@ -104,7 +104,7 @@ namespace BusinessAutomationApp.Controllers
                 ViewBag.ErrorMessage = "Id is not set for the Products!";
                 return View("_ApplicationError");
             }
-            var existingProduct = _productRepository.GetById((int)id);
+            var existingProduct = _productService.GetById((int)id);
             if(existingProduct == null) 
             {
                 ViewBag.ErrorMessage = $"Did not Find Any Product with id : {id}";
@@ -119,16 +119,17 @@ namespace BusinessAutomationApp.Controllers
             }; 
             return View(productEditVM);
         }
+
         [HttpPost]
         public IActionResult Edit(ProductEditVM model)
         {
             if (ModelState.IsValid)
             {
-                var productToUpdate = _productRepository.GetById(model.Id);
+                var productToUpdate = _productService.GetById(model.Id);
                 productToUpdate.Description = model.Description;
                 productToUpdate.Name = model.Name;
                 productToUpdate.SalesPrice = model.SalesPrice;
-                bool isSuccess = _productRepository.Update(productToUpdate);
+                bool isSuccess = _productService.Update(productToUpdate);
                 if (isSuccess)
                 {
                     return RedirectToAction("Index");
@@ -137,6 +138,24 @@ namespace BusinessAutomationApp.Controllers
 
             return View(model);
 
+        }
+        public IActionResult Remove(int? id)
+        {
+            if (id == null)
+            {
+                ViewBag.ErrorMessage = "Id is not set for the Products!";
+                return View("_ApplicationError");
+            }
+            var existingProduct = _productService.GetById((int)id);
+            if (existingProduct == null)
+            {
+                ViewBag.ErrorMessage = $"Did not Find Any Product with id : {id}";
+                return View("_ApplicationError");
+            }
+
+            _productService.Remove(existingProduct);
+
+            return RedirectToAction("Index");
         }
     }
 }

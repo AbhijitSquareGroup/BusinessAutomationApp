@@ -11,6 +11,8 @@
           "BusinessAutomation.Database": "1.0.0",
           "BusinessAutomation.Models": "1.0.0",
           "BusinessAutomation.Repository": "1.0.0",
+          "BusinessAutomation.Services.Abstraction": "1.0.0",
+          "BusinessAutomation.Services.Products": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.21",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.21",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.21"
@@ -1250,6 +1252,23 @@
         "runtime": {
           "BusinessAutomation.Repository.dll": {}
         }
+      },
+      "BusinessAutomation.Services.Abstraction/1.0.0": {
+        "dependencies": {
+          "BusinessAutomation.Models": "1.0.0"
+        },
+        "runtime": {
+          "BusinessAutomation.Services.Abstraction.dll": {}
+        }
+      },
+      "BusinessAutomation.Services.Products/1.0.0": {
+        "dependencies": {
+          "BusinessAutomation.Repositories.Abstractions": "1.0.0",
+          "BusinessAutomation.Services.Abstraction": "1.0.0"
+        },
+        "runtime": {
+          "BusinessAutomation.Services.Products.dll": {}
+        }
       }
     }
   },
@@ -2136,6 +2155,16 @@
       "sha512": ""
     },
     "BusinessAutomation.Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BusinessAutomation.Services.Abstraction/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BusinessAutomation.Services.Products/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

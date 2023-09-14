@@ -1,0 +1,63 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "BusinessAutomation.Services.Products/1.0.0": {
+        "dependencies": {
+          "BusinessAutomation.Repositories.Abstractions": "1.0.0",
+          "BusinessAutomation.Services.Abstraction": "1.0.0"
+        },
+        "runtime": {
+          "BusinessAutomation.Services.Products.dll": {}
+        }
+      },
+      "BusinessAutomation.Models/1.0.0": {
+        "runtime": {
+          "BusinessAutomation.Models.dll": {}
+        }
+      },
+      "BusinessAutomation.Repositories.Abstractions/1.0.0": {
+        "dependencies": {
+          "BusinessAutomation.Models": "1.0.0"
+        },
+        "runtime": {
+          "BusinessAutomation.Repositories.Abstractions.dll": {}
+        }
+      },
+      "BusinessAutomation.Services.Abstraction/1.0.0": {
+        "dependencies": {
+          "BusinessAutomation.Models": "1.0.0"
+        },
+        "runtime": {
+          "BusinessAutomation.Services.Abstraction.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BusinessAutomation.Services.Products/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BusinessAutomation.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BusinessAutomation.Repositories.Abstractions/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BusinessAutomation.Services.Abstraction/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessAutomation.Repositories.Abstractions\BusinessAutomation.Repositories.Abstractions.csproj" />
+    <ProjectReference Include="..\BusinessAutomation.Services.Abstraction\BusinessAutomation.Services.Abstraction.csproj" />
+  </ItemGroup>
+
 </Project>

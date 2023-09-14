@@ -19,7 +19,7 @@ builder.Services.AddScoped<IProductService, ProductService>();
 
 
 
-//Factory method implementation...........
+//Factory method implementation...........multiple repository use kortese interface ke tai ey method use kortese..........
 /*builder.Services.AddScoped<IProductRepository>(serviceProvider =>
 {
     int customerType = 1;
